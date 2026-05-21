@@ -3,7 +3,7 @@
 Use this prompt with Codex or another browser-capable coding agent.
 
 ```text
-Read `AGENTS.md` first and follow it strictly.
+Read `SKILL.md` first and follow it strictly.
 
 Task:
 Help me fill this job application form: {{JOB_URL}}
