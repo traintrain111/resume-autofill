@@ -1,0 +1,19 @@
+node_modules/
+run_output/
+.env
+*.log
+.DS_Store
+
+# Local private resume data. Do not commit real personal profiles.
+resume_profile.yaml
+resume_profile.local.yaml
+*.private.yaml
+
+# Personal application materials and generated browser artifacts.
+*.pdf
+*.doc
+*.docx
+*.jpg
+*.jpeg
+*.png
+*.webp

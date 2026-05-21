@@ -1,0 +1,15 @@
+{
+  "name": "resume-autofill-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fill": "node scripts/fill_application.mjs",
+    "check": "node --check scripts/fill_application.mjs"
+  },
+  "dependencies": {
+    "@playwright/test": "latest",
+    "js-yaml": "latest"
+  },
+  "devDependencies": {}
+}

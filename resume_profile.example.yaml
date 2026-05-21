@@ -1,0 +1,73 @@
+# Sanitized example only. Copy to resume_profile.yaml and fill locally.
+# resume_profile.yaml is ignored by Git and must not be committed.
+
+personal:
+  name_zh: "张三"
+  name_en: "San Zhang"
+  email: "example@example.com"
+  phone: "13800000000"
+  location: "北京市"
+  home_address: "北京市"
+  birth_month: "2000-01"
+  birth_date: "2000-01-01"
+  gender: "女"
+  ethnicity: "汉族"
+  native_place: "北京市"
+  linkedin: ""
+  github: ""
+  portfolio: ""
+  expected_role: "产品经理"
+  expected_cities:
+    - "北京"
+  highest_education: "硕士研究生"
+  availability: "马上到岗"
+
+education:
+  - school: "示例大学"
+    degree: "硕士研究生"
+    major: "示例专业"
+    college: "示例学院"
+    start: "2024-09"
+    start_date: "2024-09-01"
+    end: "2027-06"
+    end_date: "2027-06-01"
+    graduation_class: "2027届"
+    gpa: ""
+    ranking: ""
+    class_ranking: ""
+    professional_ranking: ""
+    study_form: "全国普通高等院校全日制"
+    courses: []
+    honors: []
+
+internships:
+  - company: "示例公司"
+    title: "示例岗位"
+    department: "示例部门"
+    location: ""
+    start: "2025-01"
+    end: "2025-06"
+    description:
+      - "示例工作内容，请替换为真实经历。"
+
+projects: []
+
+skills:
+  languages: []
+  tools: []
+  programming: []
+  product: []
+
+certificates: []
+awards: []
+
+open_ended_answers:
+  self_introduction: ""
+  career_goal: ""
+  why_this_company: ""
+  why_this_role: ""
+
+sensitive:
+  id_number: "MANUAL_INPUT_ONLY"
+  password: "MANUAL_INPUT_ONLY"
+  sms_code: "MANUAL_INPUT_ONLY"
