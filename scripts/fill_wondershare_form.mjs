@@ -425,7 +425,7 @@ async function fillInternships(page, internships, educationCount, filled, failed
       {
         index: offset + 6,
         label: `实习经历${internshipIndex + 1} 实习内容`,
-        value: (internship.description ?? []).join('\n'),
+        value: (internship.description ?? [...(internship.responsibilities ?? []), ...(internship.achievements ?? [])]).join('\n'),
         path: `internships[${internshipIndex}].description`
       }
     ];

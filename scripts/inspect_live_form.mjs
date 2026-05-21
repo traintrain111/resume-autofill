@@ -16,7 +16,8 @@ if (!url) {
 const outDir = path.join(process.cwd(), 'run_output');
 fs.mkdirSync(outDir, { recursive: true });
 
-const userDataDir = path.join(outDir, 'wondershare-browser-profile');
+const profileName = new URL(url).hostname.replace(/[^a-z0-9.-]/gi, '_');
+const userDataDir = path.join(outDir, `${profileName}-browser-profile`);
 const context = await chromium.launchPersistentContext(userDataDir, {
   headless: false,
   viewport: { width: 1440, height: 1400 }

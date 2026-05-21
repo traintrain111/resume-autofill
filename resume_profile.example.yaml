@@ -6,6 +6,7 @@ personal:
   name_en: "San Zhang"
   email: "example@example.com"
   phone: "13800000000"
+  wechat: "example_wechat"
   location: "北京市"
   home_address: "北京市"
   birth_month: "2000-01"
@@ -47,10 +48,22 @@ internships:
     location: ""
     start: "2025-01"
     end: "2025-06"
+    responsibilities:
+      - "示例职责描述，请替换为真实负责范围。"
+    achievements:
+      - "示例工作业绩，请替换为真实结果或指标。"
     description:
       - "示例工作内容，请替换为真实经历。"
 
-projects: []
+projects:
+  - name: "示例项目"
+    role: "示例角色"
+    start: "2025-01-01"
+    end: "2025-06-01"
+    responsibilities:
+      - "示例项目职责，请替换为真实负责范围。"
+    description:
+      - "示例项目描述，请替换为真实项目内容。"
 
 skills:
   languages: []

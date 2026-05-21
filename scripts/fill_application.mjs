@@ -89,12 +89,15 @@ function flattenProfile(profile) {
     { path: 'internships[0].location', value: internship.location, keywords: ['工作地点', '实习地点', 'work location'] },
     { path: 'internships[0].start', value: internship.start, keywords: ['实习开始', '工作开始', 'start date'] },
     { path: 'internships[0].end', value: internship.end, keywords: ['实习结束', '工作结束', 'end date'] },
-    { path: 'internships[0].description', value: joinBullets(internship.description), keywords: ['工作内容', '职责', 'responsibilities', 'description', 'duties'] },
+    { path: 'internships[0].responsibilities', value: joinBullets(internship.responsibilities ?? internship.description), keywords: ['职责描述', '工作职责', '职责', 'responsibilities', 'duties'] },
+    { path: 'internships[0].achievements', value: joinBullets(internship.achievements), keywords: ['工作业绩', '工作成果', '主要成果', 'achievements', 'results', 'impact'] },
+    { path: 'internships[0].description', value: joinBullets(internship.description ?? [...(internship.responsibilities ?? []), ...(internship.achievements ?? [])]), keywords: ['工作内容', '实习内容', 'description'] },
 
     { path: 'projects[0].name', value: project.name, keywords: ['项目名称', 'project name'] },
     { path: 'projects[0].role', value: project.role, keywords: ['项目角色', 'role in project', 'project role'] },
     { path: 'projects[0].start', value: project.start, keywords: ['项目开始', 'project start'] },
     { path: 'projects[0].end', value: project.end, keywords: ['项目结束', 'project end'] },
+    { path: 'projects[0].responsibilities', value: joinBullets(project.responsibilities), keywords: ['项目职责', '项目责任', 'project responsibilities'] },
     { path: 'projects[0].description', value: joinBullets(project.description), keywords: ['项目描述', 'project description'] },
 
     { path: 'skills.all', value: compact([...(profile.skills?.tools ?? []), ...(profile.skills?.programming ?? [])]).join(', '), keywords: ['技能', 'skills', 'technical skills'] },
