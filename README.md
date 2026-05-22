@@ -36,15 +36,25 @@ npm install
 npx playwright install chromium
 ```
 
-## 准备简历数据
+## 使用步骤
 
-先复制示例文件：
+### 1. 解析简历并生成 profile
+
+先把你的简历 PDF、Word 或文本内容交给 Codex，让它基于简历内容生成 `resume_profile.yaml`。可以使用类似提示：
+
+```text
+请基于我的简历填写 resume_profile.yaml。
+只能使用简历中明确出现的信息，不要编造。
+对不确定字段留空或列出问题。
+```
+
+如果还没有 `resume_profile.yaml`，先复制示例文件：
 
 ```bash
 cp resume_profile.example.yaml resume_profile.yaml
 ```
 
-然后编辑 `resume_profile.yaml`。建议原则：
+自动解析后必须人工核对 `resume_profile.yaml`。建议原则：
 
 - 只写确定事实。
 - 不写密码、验证码、身份证号、银行卡等高敏信息。
@@ -56,7 +66,7 @@ cp resume_profile.example.yaml resume_profile.yaml
   - `responsibilities`：项目职责。
   - `description`：项目描述。
 
-## 推荐使用方式：让 Codex 协助
+### 2. 打开目标招聘网站并让 Codex 辅助填写
 
 在 Codex 中打开本项目目录，然后使用类似提示：
 
@@ -73,6 +83,10 @@ Do not click final submit.
 - Codex 可以检查页面、填写可确定字段、列出不确定字段。
 - 如果官网已解析简历，Codex 会优先补齐空字段，并审查解析结果。
 - 敏感字段和最终提交必须由用户确认。
+
+### 3. 人工复核后再提交
+
+Codex 填写完成后会输出已填写字段、已纠正字段、跳过字段、需要复核字段和页面错误提示。最终提交前需要你逐项检查。
 
 ## 使用脚本检查页面
 
