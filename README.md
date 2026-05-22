@@ -102,48 +102,12 @@ npm run fill -- --url "https://example.com/apply" --manual-login
 
 通用脚本只适合简单页面。复杂招聘站点建议先用 `watch_live_form.mjs` 抓取页面结构，再让 Codex 判断是否需要专用脚本。
 
-## 隐私与 GitHub 发布
-
-`.gitignore` 已默认忽略：
-
-- `resume_profile.yaml`
-- `run_output/`
-- `node_modules/`
-- PDF、Word、图片等可能含隐私的材料
-
-发布到 GitHub 前建议检查：
-
-```bash
-git status --short --ignored
-git ls-files
-```
-
-确认不要出现：
-
-```text
-resume_profile.yaml
-run_output/
-node_modules/
-真实简历 PDF
-截图或日志
-```
-
-如果不确定，先发布为 private repository。
-
 ## 常见问题
 
 ### 官网已经解析得很好，还需要这个项目吗？
 
 需要。官网解析结果可以作为草稿，但不一定严谨。项目规则要求仍以 `resume_profile.yaml` 为事实来源：空字段优先补齐，明显不一致的非敏感字段可以纠正，敏感字段只提示用户复核。
 
-### 为什么不自动点提交？
-
-提交、投递、签署、授权等动作不可逆，必须由用户本人确认。
-
 ### 为什么有些字段不填？
 
 通常是因为 `resume_profile.yaml` 没有对应事实、字段属于敏感信息、页面选项没有合理匹配，或开放题需要用户确认。
-
-### 可以把真实 profile 上传 GitHub 吗？
-
-不建议。`resume_profile.yaml` 包含个人信息，应只保存在本地。
